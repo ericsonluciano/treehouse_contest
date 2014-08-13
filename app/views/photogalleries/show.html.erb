@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @photogallery.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @photogallery.description %>
+</p>
+
+<p>
+  <strong>Posted by:</strong>
+  <%= @photogallery.posted_by %>
+</p>
+
+<p>
+  <strong>Date posted:</strong>
+  <%= @photogallery.date_posted %>
+</p>
+
+<%= link_to 'Edit', edit_photogallery_path(@photogallery) %> |
+<%= link_to 'Back', photogalleries_path %>
