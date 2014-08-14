@@ -1,4 +1,4 @@
-<%= form_for(@photogallery) do |f| %>
+<%= form_for @photogallery, :html => { :multipart => true }  do |f| %>
   <% if @photogallery.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@photogallery.errors.count, "error") %> prohibited this photogallery from being saved:</h2>
@@ -27,6 +27,12 @@
     <%= f.label :date_posted %><br>
     <%= f.date_select :date_posted %>
   </div>
+
+  <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.file_field :photo %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
